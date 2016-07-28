@@ -3,7 +3,7 @@ Jenkins Punisher
 
 ## Installation
 
-1. Pull this repo to your system.
+1. Clone this repo to your system `git clone https://github.com/gmuraleekrishna/jenkins_punisher.git`.
 2. Done!
 
 ## Configuration
@@ -19,7 +19,7 @@ Eg.
 
 
 ## Run punisher
-	$bundle install
+	$ bundle install
 	$ ruby run_punisher.rb
 
 
