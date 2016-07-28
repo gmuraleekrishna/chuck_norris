@@ -25,11 +25,7 @@ end
 class Jenkins
 	## http://www.rubydoc.info/gems/jenkins_api_client/JenkinsApi/Client/Job
 	def initialize(url)
-		jenkins_client = JenkinsApi::Client.new( server_url: url,
-																						ssl: true,
-																						username: 'mkrishna',
-																						http_open_timeout: 15,
-																						password: "6349d4ca4364ae076c163dd2a5fa3354" )
+		jenkins_client = JenkinsApi::Client.new( server_url: url, ssl: true, username: 'mkrishna', http_open_timeout: 15, password: "6349d4ca4364ae076c163dd2a5fa3354" )
 		@jobs = JenkinsApi::Client::Job.new(jenkins_client)
 	end
 
