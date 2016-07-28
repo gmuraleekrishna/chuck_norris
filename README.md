@@ -1,6 +1,8 @@
 Jenkins Punisher
 ================
 
+Reprimands the culprit who breaks the builds in the jenkins CI.
+
 ## Installation
 
 1. Clone this repo to your system `git clone https://github.com/gmuraleekrishna/jenkins_punisher.git`.
