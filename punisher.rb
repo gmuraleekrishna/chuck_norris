@@ -24,8 +24,8 @@ end
 
 class Jenkins
 	## http://www.rubydoc.info/gems/jenkins_api_client/JenkinsApi/Client/Job
-	def initialize(url)
-		jenkins_client = JenkinsApi::Client.new( server_url: url, ssl: true, username: 'mkrishna', http_open_timeout: 15, password: "6349d4ca4364ae076c163dd2a5fa3354" )
+	def initialize(url, user_name, api_key)
+		jenkins_client = JenkinsApi::Client.new( server_url: url,	ssl: true, username: user_name, http_open_timeout: 15, password: api_key)
 		@jobs = JenkinsApi::Client::Job.new(jenkins_client)
 	end
 
@@ -40,16 +40,14 @@ class Jenkins
 end
 
 
-jenkins = Jenkins.new('https://svn.aconex.com/field-management-hudson')
+jenkins = Jenkins.new('url', 'user_name', 'api_key')
 jenkins.all_jobs.each do |job_name|
 	last_build = jenkins.latest_build job_name
 	status = last_build['result']
 	puts "#{job_name} -> #{status}"
 	if status == 'FAILURE' && !last_build['building']
-		p last_build
 		Punisher.announce_build(last_build['fullDisplayName'])
 		Punisher.punish_all(last_build['culprits'])
 	end
 end
-
 
