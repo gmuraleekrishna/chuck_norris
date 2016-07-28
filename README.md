@@ -1,6 +1,10 @@
 Jenkins Punisher
 ================
 
+## Installation
+
+1. Pull this repo to your system.
+2. Done!
 
 ## Configuration
 
@@ -15,7 +19,7 @@ Eg.
 
 
 ## Run punisher
-
+	$bundle install
 	$ ruby run_punisher.rb
 
 
