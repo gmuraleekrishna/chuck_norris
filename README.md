@@ -26,8 +26,8 @@ Eg.
 
 ## Todo
 
-- Seperate configuration and code
-- Remeber the last punished build & culprits and announce that build only once
+- Separate configuration and code
+- Remember the last punished build & culprits and announce that build only once
 - Selective build punishing
 - Use human voice instead of espeak robotic voice 
 
