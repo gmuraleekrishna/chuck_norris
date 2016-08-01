@@ -3,6 +3,8 @@ Jenkins Punisher
 
 Reprimands the culprit who breaks the builds in the jenkins CI.
 
+![chuck norris](https://cdn.meme.am/instances/64556564.jpg)
+
 ## Installation
 
 1. Clone this repo to your system `git clone https://github.com/gmuraleekrishna/jenkins_punisher.git`.
