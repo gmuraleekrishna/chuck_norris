@@ -3,7 +3,9 @@ class Punisher
 	include ESpeak
 
 	def self.punish_all(culprits)
-		self.speak("The culprits are ")
+		who_da_culprits = (culprits.empty?) ? 'Offenders unknown' : 'The culprits are '
+		self.speak(who_da_culprits)
+
 		culprits.select do |culprit|
 			self.speak(culprit['fullName'])
 		end
