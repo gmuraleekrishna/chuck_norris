@@ -1,0 +1,5 @@
+# Copy this to config.yaml in the root directory and substitute your values.
+user_name: 'user_name'
+password: 'top_secret_password'
+jenkins_url: 'https://jenkins_url'
+delay: 10
