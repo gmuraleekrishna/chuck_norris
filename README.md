@@ -1,27 +1,32 @@
-Jenkins Punisher
-================
+Chuck Norris
+==============
 
-Reprimands the culprit who breaks the builds in the jenkins CI.
+Breaks the bones of the guy who breaks the jenkins builds.
 
 ![chuck norris](https://cdn.meme.am/instances/64556564.jpg)
 
 ## Installation
 
-1. Clone this repo to your system `git clone https://github.com/gmuraleekrishna/jenkins_punisher.git`.
-2. Install espeak (`brew install espeak`)
+1. Clone this repo to your system `git clone https://github.com/gmuraleekrishna/chuck_norris.git`.
+2. Install [espeak](http://espeak.sourceforge.net/) (`brew install espeak`)
 3. Done!
 
 ## Configuration
 
-Get your user name and api key (or password) from jenkins user configuration
-Add `JENKINS_URL`, `USER_NAME` and `API_KEY` to `config.yml` (see the sample config)
-Set the polling delay in minutes in `DELAY`
+1. Get your user name and api key (or password) from jenkins user configuration
+1. Copy the sample config to new file `config.yml`
+	$ mv sample.config.yml config.yml
+
+1. Set `jenkins_url`, `user_name` and `password` in `config.yml` (see the sample config)
+1. Set the polling delay in minutes in `DELAY` (default: 10mins)
 
 Eg.
 
-	JENKINS_URL = 'https://jenkins.mywebsite.com'
-	USER_NAME = 'johndoe'
-	API_KEY = '8490feacb4545b3b4bb7b5ba'
+	# config.yml
+	jenkins_url: 'https://jenkins.mywebsite.com'
+	user_name: 'johndoe'
+	password: 'api_key_or_password'
+	delay: 10
 
 
 ## Run punisher
