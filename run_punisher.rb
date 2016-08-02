@@ -1,11 +1,13 @@
 require_relative 'jenkins'
 require_relative 'punisher'
+require 'yaml'
 
+config = YAML.load_file('config.yml')
 
-USER_NAME = ''
-API_KEY = ''
-JENKINS_URL = ''
-DELAY = 10
+USER_NAME = config['user_name'] || ''
+API_KEY = config['password'] || ''
+JENKINS_URL = config['jenkins_url'] || ''
+DELAY = config['delay'] || 10
 
 jenkins = Jenkins.new(JENKINS_URL, USER_NAME, API_KEY)
 
