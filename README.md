@@ -11,8 +11,8 @@ Reprimands the culprit who breaks the builds in the jenkins CI.
 
 ## Configuration
 
-Get your user name and api key from jenkins user configuration
-Add `JENKINS_URL`, `USER_NAME` and `API_KEY` to `run_punisher.rb`
+Get your user name and api key (or password) from jenkins user configuration
+Add `JENKINS_URL`, `USER_NAME` and `API_KEY` to `config.yml` (see the sample config)
 Set the polling delay in minutes in `DELAY`
 
 Eg.
