@@ -37,5 +37,6 @@ Eg.
 
 - Remember the last punished build & culprits and announce that build only once
 - Selective build punishing
+- Slack notification using jenkins user to slack user mapping
 - Use human voice instead of espeak robotic voice
 
